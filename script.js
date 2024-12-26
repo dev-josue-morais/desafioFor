@@ -197,7 +197,7 @@ button.addEventListener("click", () => {
     let i = 0
     while (i < contacts.length){
         if (contacts[i].name.toLowerCase() === searchName) {
-            result = contacts[i].name;
+            result = contacts[i];
             break;
         }
         i++;
