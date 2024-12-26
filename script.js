@@ -189,7 +189,7 @@ const contacts = [
 button.addEventListener("click", () => {
     erro.style.display = "none";
     contatoImpres.style.display = "none";
-    const searchName = inputNew.value;
+    const searchName = inputNew.value.trim();
     let result = null;
 
     // Usando o loop for para buscar o contato
