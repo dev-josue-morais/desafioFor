@@ -192,14 +192,13 @@ const contacts = [
 button.addEventListener("click", () => {
     erro.style.display = "none";
     contatoImpres.style.display = "none";
-    const searchName = inputNew.value.trim();
+    const searchName = inputNew.value.trim().toLowerCase();
     let result = null;
 
-    // Usando o loop for para buscar o contato
     for (let i = 0; i < contacts.length; i++) {
-        if (contacts[i].name === searchName) {
+        if (contacts[i].name.toLowerCase() === searchName) {
             result = contacts[i];
-            break; // Sai do loop quando encontrar
+            break;
         }
     }
 
