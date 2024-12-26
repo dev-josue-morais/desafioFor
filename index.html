@@ -88,18 +88,28 @@
         { name: "Aline Amaral", number: "61 9 9314-4538" },
         { name: "Maria Aparecida", number: "62 9 9212-7836" },
     ];
+
     button.addEventListener("click", () => {
         erro.style.display = "none";
         contatoImpres.style.display = "none";
         const searchName = inputNew.value;
-        const result = contacts.find(contact => contact.name === searchName);
+        let result = null;
+
+        // Usando o loop for para buscar o contato
+        for (let i = 0; i < contacts.length; i++) {
+            if (contacts[i].name === searchName) {
+                result = contacts[i];
+                break; // Sai do loop quando encontrar
+            }
+        }
+
         if (result) {
             contatoImpres.style.display = "block";
-            contatoImpres.innerHTML = `Nome = ${result.name}<br> Telefone = ${result.number}`
+            contatoImpres.innerHTML = `Nome = ${result.name}<br> Telefone = ${result.number}`;
             console.log("Contato encontrado:", result);
         } else {
             erro.style.display = "block";
-            erro.innerHTML = `Contato não encontrado.`
+            erro.innerHTML = `Contato não encontrado.`;
         }
     });
 
