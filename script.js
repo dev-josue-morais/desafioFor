@@ -194,15 +194,13 @@ button.addEventListener("click", () => {
     contatoImpres.style.display = "none";
     const searchName = inputNew.value.trim();
     let result = null;
-    let i = 0
-    while (i < contacts.length){
-        if (contacts[i].name.toLowerCase() === searchName.toLowerCase()) {
-            result = contacts[i];
-            break;
-        }
-        i++;
-    }
 
+    contacts.forEach(item => {
+        if (item.name.toLowerCase() === searchName.toLowerCase()) {
+            result = item;
+        };
+    });
+    
     if (result) {
         contatoImpres.style.display = "block";
         contatoImpres.innerHTML = `Nome = ${result.name}<br> Telefone = ${result.number}`;
