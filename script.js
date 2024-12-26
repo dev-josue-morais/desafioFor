@@ -8,7 +8,7 @@ inputNew.addEventListener("input", function (event) {
     let input = event.target;
     input.value = input.value
         .split(' ')
-        .map(palavra => palavra.charAt(0).toUpperCase() + palavra.slice(1))
+        .map(palavra => palavra.charAt(0).toUpperCase() + palavra.slice(1).toLowerCase())
         .join(' ');
 });
 
