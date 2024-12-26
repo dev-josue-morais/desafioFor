@@ -192,11 +192,11 @@ const contacts = [
 button.addEventListener("click", () => {
     erro.style.display = "none";
     contatoImpres.style.display = "none";
-    const searchName = inputNew.value.trim().toLowerCase();
+    const searchName = inputNew.value.trim();
     let result = null;
     let i = 0
     while (i < contacts.length){
-        if (contacts[i].name.toLowerCase() === searchName) {
+        if (contacts[i].name.toLowerCase() === searchName.toLowerCase()) {
             result = contacts[i];
             break;
         }
