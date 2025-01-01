@@ -12,7 +12,7 @@ Este projeto consiste em um simples buscador de contatos, onde o usuário pode i
 ## Como Usar
 
 1. Acesse a demonstração do projeto clicando no link abaixo:
-   [Demonstração do Buscador de Contatos](https://josue28jrd.github.io/desafioFor/)
+   [Demonstração do Buscador de Contatos](https://dev-josue-morais.github.io/desafioFor/)
 
 2. Digite o nome do contato desejado no campo de texto e clique no botão "Procurar Contato".
 
